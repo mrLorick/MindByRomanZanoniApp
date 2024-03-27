@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.lorick.chatterbox.view.fragment.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/meditationsFragment"
+        android:name="com.lorick.chatterbox.view.fragment.meditations.MeditationsFragment"
+        android:label="fragment_meditations"
+        tools:layout="@layout/fragment_meditations" />
+    <fragment
+        android:id="@+id/edificationFragment"
+        android:name="com.lorick.chatterbox.view.fragment.edification.EdificationFragment"
+        android:label="fragment_edification"
+        tools:layout="@layout/fragment_edification" />
+    <fragment
+        android:id="@+id/journalFragment"
+        android:name="com.lorick.chatterbox.view.fragment.journal.JournalFragment"
+        android:label="fragment_journal"
+        tools:layout="@layout/fragment_journal" />
+    <fragment
+        android:id="@+id/resourceFragment"
+        android:name="com.lorick.chatterbox.view.fragment.resource.ResourceFragment"
+        android:label="fragment_resource"
+        tools:layout="@layout/fragment_resource" />
+</navigation>

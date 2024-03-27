@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.lorick.chatterbox.viewModel.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.activity.nowPlaying.NowPlayingActivity">
+
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/cvImg"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_300sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/placeholder_mind"
+                    android:scaleType="centerCrop"
+                    android:layout_marginHorizontal="@dimen/_13sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/circleImageVie10w"
+                    app:strokeColor="@color/theme_color_green"
+                    app:strokeWidth="@dimen/_2sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView4"
+                    style="@style/avenir_bold_black_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:letterSpacing="0.03"
+                    tools:text="Pride"
+                    android:textSize="@dimen/_18ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cvImg" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvDec"
+                    style="@style/avenir_regular_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    tools:text="Meditation track"
+                    android:textColor="@color/textview_color"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="@+id/appCompatTextView4"
+                    app:layout_constraintStart_toStartOf="@+id/appCompatTextView4"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView4" />
+
+                <SeekBar
+                    android:id="@+id/rangeSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDec"
+                    app:trackColorInactive="@color/grey_D8D8D8"
+                    app:trackHeight="@dimen/_5sdp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvStartTime"
+                    style="@style/avenir_regular_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@={viewModel.musicStart}"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textColor="@color/textview_color"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintStart_toStartOf="@+id/rangeSlider"
+                    app:layout_constraintTop_toBottomOf="@+id/rangeSlider" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvEndTime"
+                    style="@style/avenir_regular_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:text="@={viewModel.musicEnd}"
+                    android:textColor="@color/textview_color"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="@+id/rangeSlider"
+                    app:layout_constraintTop_toBottomOf="@+id/rangeSlider" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivDecrease10sec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_fluent_skip_"
+                    app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView9"
+                    app:layout_constraintEnd_toStartOf="@+id/appCompatImageView9"
+                    app:layout_constraintHorizontal_bias="0.7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/appCompatImageView9" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@drawable/ic_play_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rangeSlider" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBuffering"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@drawable/ic_simple_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rangeSlider" />
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:indeterminateTint="@color/white"
+                    android:padding="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/ivBuffering"
+                    app:layout_constraintEnd_toEndOf="@id/ivBuffering"
+                    app:layout_constraintStart_toStartOf="@id/ivBuffering"
+                    app:layout_constraintTop_toTopOf="@id/ivBuffering" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/buffering"
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="ivBuffering,progress"
+                    app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView9"
+                    app:layout_constraintEnd_toEndOf="@+id/appCompatImageView9"
+                    app:layout_constraintStart_toStartOf="@+id/appCompatImageView9"
+                    app:layout_constraintTop_toTopOf="@+id/appCompatImageView9" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivIncrease10sec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_fluent_skip_forward"
+                    app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.3"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatImageView9"
+                    app:layout_constraintTop_toTopOf="@+id/appCompatImageView9" />
+
+                <Spinner
+                    android:id="@+id/tvSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:padding="0dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivIncrease10sec"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.6"
+                    app:layout_constraintStart_toEndOf="@+id/ivIncrease10sec"
+                    app:layout_constraintTop_toTopOf="@+id/ivIncrease10sec" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

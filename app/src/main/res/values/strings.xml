@@ -1,0 +1,264 @@
+<resources>
+    <string name="app_name">ChatterBox</string>
+    <string name="facebook_app_id">2106380133028651</string>
+    <string name="fb_login_protocol_scheme">fb2106380133028651</string>
+    <string name="facebook_client_token">23456</string>
+
+    <!-- Signup -->
+    <string name="lets_start">Let’s get started</string>
+    <string name="full_name">Full name</string>
+    <string name="user_name">Micheal Sam</string>
+    <string name="email_address">Email address</string>
+    <string name="phone_number">Phone number</string>
+    <string name="phone_number_hint">Phone number</string>
+    <string name="password">Password</string>
+    <string name="create_account">Create account </string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="already_account">Already have an account?<font color="#000000"> Sign In</font> </string>
+
+    <string name="default_notification_channel_id">100</string>
+
+    <!--Login-->
+    <string name="Welcome_to_Mind">Welcome to Mind</string>
+    <string name="enter_email_password">Enter your email and password.</string>
+    <string name="remember_me">Remember me </string>
+    <string name="sign_in">Sign In</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="or_signup_with">Or Sign In With</string>
+    <string name="don_have_account">Did’t have an account?<font color="#000000"> Create account</font></string>
+
+    <!--Forgot Password-->
+    <string name="example_email">example@gmail.com</string>
+    <string name="submit">Submit</string>
+    <string name="Forgot_password">Forgot password</string>
+    <string name="enter_email_reset_link">Please enter email to sent reset link.</string>
+
+
+    <!-- create password-->
+    <string name="create_password">Create password</string>
+    <string name="create">Create</string>
+    <string name="password_length">Passwords must be at least 8 character, with at least 1 number, 1 letter, and 1 special character</string>
+
+
+    <!-- on board-->
+    <string name="onboard_dummy">Lorem Ipsum is simply dummy</string>
+    <string name="get_started">Get started </string>
+    <string name="Login">Login </string>
+    <string name="onboard_dummy_detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem</string>
+
+    <!--Biometric Login-->
+    <string name="biometric_login">Biometric login for my app</string>
+    <string name="Cancel">Cancel</string>
+    <string name="login_using_biometric">Unlock app using Biometric</string>
+
+
+    <!--Register Successfully-->
+    <string name="Register_Successfully">Register Successfully</string>
+    <string name="congratulation_account_created">Congratulation! your account has been created.\n Go to home to get amazing experience.</string>
+    <string name="go_to_home">Go to home</string>
+    <string name="hello_blank_fragment">Blank Fragment</string>
+
+
+    <!-- Verification Code -->
+    <string name="verification_Code">Verification Code</string>
+    <string name="verification_Code_sent">We have sent the code verification to email address </string>
+    <string name="Verify">Verify</string>
+    <string name="time_set">02:39</string>
+    <string name="dont_receive_code">Didn\'t receive the code?</string>
+    <string name="resend_code"><font color="#000000"> Resend </font></string>
+
+    <!-- Meditation-->
+    <string name="Goals">Goals</string>
+    <string name="Anxiety">Anxiety</string>
+    <string name="course_time">Course : 10 - 20 min</string>
+
+
+    <!-- Meditation Details -->
+    <string name="search_user">Search User</string>
+    <string name="search_meditation">Search Meditations</string>
+    <string name="Self_Love">Self Love</string>
+    <string name="love">Love</string>
+    <string name="time">20 min</string>
+    <string name="recover_from_burnout">Recover from burnout with active breath Meditation</string>
+
+
+    <!--  Edification Category list -->
+    <string name="daily_practice">Daily Practice for overwhelm &amp; Burnout</string>
+    <string name="loreum_detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,  typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,</string>
+
+    <!-- resources -->
+    <string name="meal_inspiration">Meal Inspiration</string>
+    <string name="Exercise_routine">Exercise Routine</string>
+    <string name="view_pdf">View Pdf</string>
+
+    <!-- Password change -->
+    <string name="Password_changes">Password changes!</string>
+    <string name="back_To_login">Back To Login</string>
+    <string name="Password_changes_successfully">Your password has been changes successfully.</string>
+
+
+    <!-- Notification-->
+    <string name="lorem_heading">lorem Ipsum Heading (2 min ago)</string>
+    <string name="view">view</string>
+    <string name="Notification">Notification</string>
+    <string name="notification_detail">Amet minim moll-it non underused McCull-och west</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="meditation">Meditation</string>
+    <string name="edification">Edification</string>
+    <string name="journal">Journal</string>
+    <string name="resources">Resources</string>
+    <string name="_100_likes">Likes</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_sed_do_eiusmod_tempor_more">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor... more</string>
+    <string name="add_a_comment">Add a comment…</string>
+    <string name="_30_minutes_ago">30 minutes ago</string>
+    <string name="view_all_16_comments">View all 0 comments</string>
+    <string name="event_details">Event Details</string>
+    <string name="username_demo">Username Demo</string>
+    <string name="liked_by_12_others">Liked by <font color="#31B5A0">0 </font> others</string>
+    <string name="_100">0</string>
+    <string name="_16">0</string>
+    <string name="_5">0</string>
+    <string name="lorem_ipsum_is_simply_dummy_text_of_the_printing_and_typesetting_industry_lorem_ipsum_has_been_the_industry_s_standard_dummy_text_ever_since_the_1500s_lorem_ipsum_is_simply_dummy_text_of_the_printing_and_typesetting_industry_lorem_ipsum_has_been_the_industry_s_standard_dummy_text_ever_since_the_1500s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s</string>
+    <string name="date_17_10_2023">Date : 17/10/2023</string>
+    <string name="time_12_00_pm">Time : 12:00 PM</string>
+    <string name="existing_entries">Existing Entries</string>
+    <string name="new_entry">New Entry</string>
+    <string name="enter_search_term_here">Search Journal here</string>
+    <string name="subject">Subject</string>
+    <string name="type">Type</string>
+    <string name="date">Date</string>
+    <string name="edit">Edit</string>
+    <string name="weight">Weight</string>
+    <string name="holidays">Holidays</string>
+    <string name="_01_20_23">01/20/23</string>
+    <string name="settings">Settings</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New password</string>
+    <string name="change_password">Change Password</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="message">Message</string>
+    <string name="invite">Invite</string>
+    <string name="invite_a_friend">Invite a Friend</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="save">Save</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="meditation_details">Meditation Details</string>
+    <string name="message_heading">Message</string>
+    <string name="term_policy"><![CDATA[Term & Policy]]></string>
+    <string name="about_us">About Us</string>
+    <string name="how_is_your_experience_with_mind_app">How is your experience with Mind app? 🤗</string>
+    <string name="your_rating_and_feedback_is_much_valuable_to_us_for_serving_you_the_best">Your rating and feedback is much valuable to us for serving you the best</string>
+    <string name="entry_type">Entry Type</string>
+    <string name="free_form">Free Form</string>
+    <string name="jot_method">JOT Method</string>
+    <string name="weight_method">Weight Method</string>
+    <string name="set_reminder">Set Reminder</string>
+    <string name="an_hour_from_now">An hour from now</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="pick_date_and_time">Pick date and time</string>
+    <string name="today">Today</string>
+    <string name="notes">Notes</string>
+    <string name="journal_heading">Journal</string>
+    <string name="likes">Likes</string>
+    <string name="demetri_caron">Demetri Caron</string>
+    <string name="comments">Comments</string>
+    <string name="top_comments">Top comments</string>
+    <string name="looks_great_let_s_do_it">Looks great, let’s do it !</string>
+    <string name="_1_day_ago">1 day ago</string>
+    <string name="default_web_client_id">233171647409-hdb2f1n8676pmsqckqjlpuk8h8hndlu7.apps.googleusercontent.com</string>
+
+
+    <string-array name="comment_list">
+        <item>Top Comment</item>
+        <item>Newest First</item>
+    </string-array>
+
+    <!--  common Error  -->
+    <string name="something_went_wrong">Oh..Something went wrong.Please try again.</string>
+    <string name="connectErr">Failed to connect to server. Please check your internet connection.</string>
+    <string name="timeoutErr">Failed to connect to server. Please try after sometime.</string>
+    <string name="timeoutErr_">Failed to connect to server. Sorry there was an error Please try again.</string>
+    <string name="noInternetErr">Please check your internet connection and try again.</string>
+    <string name="your_account_login">Your account has been logged into another device..</string>
+    <string name="please_log_in_account">Please LogIn your Account first.</string>
+    <string name="select_county_first">Please Select Your Country First</string>
+    <string name="consultant_can_only">Consultant can only signup with the Canada country</string>
+    <string name="reject_call">Reject Call</string>
+    <string name="answer">Answer</string>
+
+
+    <!--validation-->
+    <string name="please_enter_email">Please Enter Email</string>
+    <string name="please_enter_comment">Please Enter Comment</string>
+    <string name="please_enter_name">Please Enter Name</string>
+    <string name="number_should_be_valid">Phone number should be valid</string>
+    <string name="please_enter_valid_email">Please Enter Valid Email</string>
+    <string name="please_enter_valid_password">Please Enter Valid Password</string>
+    <string name="password_should_contain_special_character">Password must be at least 8 characters long, contain at least one number, uppercase, lowercase and special letters</string>
+
+    <string name="please_enter_password">Please Enter Password</string>
+    <string name="please_enter_c_password">Please Enter Confirm Password</string>
+    <string name="please_enter_contact_number">Please Enter Contact Number</string>
+    <string name="please_enter_otp">Please Enter OTP</string>
+    <string name="please_enter_password_not_match">Password &amp; Confirm Password Must Be Same</string>
+    <string name="please_enter_subject">Please Enter Subject</string>
+    <string name="please_enter_message">Please Enter Message</string>
+    <string name="please_enter_new_password">Please Enter New Password</string>
+    <string name="please_enter_old_password">Please Enter Old Password</string>
+
+
+    <!--* snack bar-->
+    <string name="error">Error</string>
+    <string name="empty">Empty</string>
+    <string name="invalid">Invalid</string>
+    <string name="success">Success</string>
+    <string name="enter_your_name_to_add_a_life">Enter your name to add a life</string>
+    <string name="are_you_sure_you_want_nto_logout">Are you sure you want \nto logout?</string>
+    <string name="are_you_sure_you_want_the_game">Are you sure you want \nto exit the Game??</string>
+    <string name="update">Update</string>
+    <string name="view_all">"View all "</string>
+    <string name="launch_live_zoom">Launch live zoom</string>
+    <string name="enter_full_name">Enter Full Name</string>
+    <string name="choose_option">Choose Option</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="liked_by">"Liked by "</string>
+
+    <string name="authentication_error">Authentication error</string>
+    <string name="authentication_success">Authentication Success</string>
+    <string name="authentication_failed">Authentication failed</string>
+    <string name="tv_biometric_authentication">Biometric Authentication</string>
+    <string name="biometric_authentication">Biometric Authentication</string>
+    <string name="pros">Pros</string>
+    <string name="cons">Cons</string>
+    <string name="subtotal">%1$s Subtotal</string>
+    <string name="subtotal_temp">0 Subtotal</string>
+    <string name="wgt">Wgt</string>
+    <string name="title">Title</string>
+    <string name="talk_to_a_bot">Talk to a Bot</string>
+    <string name="message_specialist">Message Specialist</string>
+    <string name="ask_a_general_question">Ask a General Question</string>
+    <string name="pdf_name">PDF_Name</string>
+    <string name="date_">Date : %1$s</string>
+    <string name="time_">Time : %1$s</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="no_chats_found">No Chats Found</string>
+    <string name="okay">Okay</string>
+    <string name="book_session">Book Session</string>
+    <string name="search">Search</string>
+    <string name="search_category_sub_category">Search Category / Sub Category</string>
+    <string name="are_you_sure">Are You Sure?</string>
+    <string name="do_you_want_to_save_or_cancel">Do you want to Save or Cancel?</string>
+
+    <string-array name="speed_video">
+        <item>0.25x</item>
+        <item>0.5x</item>
+        <item>0.75x</item>
+        <item>Normal</item>
+        <item>1.25x</item>
+        <item>1.5x</item>
+        <item>2x</item>
+    </string-array>
+</resources>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.activity.profileDetails.ProfileDetailsActivity">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/cvImg"
+                    android:layout_width="@dimen/_95sdp"
+                    android:layout_height="@dimen/_95sdp"
+                    android:elevation="@dimen/_4sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/no_image_placeholder"
+                    app:layout_constraintBottom_toTopOf="@+id/materialCardView"
+                    app:layout_constraintEnd_toEndOf="@+id/materialCardView"
+                    app:layout_constraintStart_toStartOf="@+id/materialCardView"
+                    app:layout_constraintTop_toTopOf="@+id/materialCardView"
+                    app:shapeAppearanceOverlay="@style/circleImageView"
+                    app:strokeColor="@color/theme_color_green"
+                    app:strokeWidth="@dimen/_3sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView2"
+                    style="@style/avenir_regular_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:textColor="@color/theme_color_green"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:drawableStart="@drawable/ic_edit_text"
+                    android:elevation="@dimen/_20sdp"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cvImg" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView"
+                    android:layout_width="0dp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_15sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:cardElevation="@dimen/_1sdp"
+                    android:elevation="@dimen/_5sdp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:strokeColor="@android:color/transparent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white">
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginTop="@dimen/_80sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etFullName"
+                                style="@style/avenir_edit_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_14sdp"
+                                android:layout_marginEnd="@dimen/_14sdp"
+                                android:cursorVisible="false"
+                                android:drawableStart="@drawable/profile"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:focusable="false"
+                                android:gravity="center_vertical"
+                                android:text="Micelle Kagura" />
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayoutContact"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etContact"
+                                style="@style/avenir_edit_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_14sdp"
+                                android:layout_marginEnd="@dimen/_14sdp"
+                                android:cursorVisible="false"
+                                android:drawableStart="@drawable/ic_contact_us"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:focusable="false"
+                                android:gravity="center_vertical"
+                                android:text="+1 908 878 6565" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/view14"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_marginHorizontal="@dimen/_15sdp"
+                            android:background="@color/grey_f3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_marginHorizontal="@dimen/_15sdp"
+                            android:background="@color/grey_f3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/relativeLayoutContact" />
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayoutEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/relativeLayoutContact">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etEmail"
+                                style="@style/avenir_edit_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_14sdp"
+                                android:layout_marginEnd="@dimen/_14sdp"
+                                android:cursorVisible="false"
+                                android:drawableStart="@drawable/email"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:focusable="false"
+                                android:gravity="center_vertical"
+                                android:text="Demohello123@gmail.com" />
+
+                        </RelativeLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

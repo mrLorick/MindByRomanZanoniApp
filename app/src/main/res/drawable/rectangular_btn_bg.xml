@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#31B5A0" /> <!-- Fill color in HEX format, e.g., Red -->
+    <corners android:radius="50dp" /> <!-- Optional: Set corner radius if you want rounded corners -->
+</shape>

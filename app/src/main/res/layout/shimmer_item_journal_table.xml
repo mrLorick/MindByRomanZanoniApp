@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/tableHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/journal_table_item_bg"
+        android:paddingHorizontal="@dimen/_5sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:weightSum="4"
+        app:layout_constraintTop_toBottomOf="@id/cvSearch">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            android:background="@color/shimmerColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSubject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:background="@color/shimmerColor"
+            app:layout_constraintStart_toEndOf="@id/tvDate"
+            app:layout_constraintEnd_toStartOf="@id/tvType"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/shimmerColor"
+            android:layout_weight="1.3"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            app:layout_constraintEnd_toStartOf="@id/tvEdit"
+            app:layout_constraintStart_toEndOf="@id/tvSubject"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tvEdit"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_weight="0.2"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            android:padding="@dimen/_5sdp"
+            android:background="@color/shimmerColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

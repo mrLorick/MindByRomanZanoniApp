@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:paddingHorizontal="@dimen/_10sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@color/shimmerColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUserName"
+            style="@style/avenir_bold_black_text_style"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:textSize="@dimen/_13ssp"
+            android:background="@color/shimmerColor"
+            app:layout_constraintBottom_toTopOf="@id/tvComment"
+            app:layout_constraintStart_toEndOf="@+id/circleImageView"
+            app:layout_constraintTop_toTopOf="@+id/circleImageView" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOneDayAgo"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/theme_color_green"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            android:textSize="@dimen/_7ssp"
+            android:background="@color/shimmerColor"
+            app:layout_constraintBottom_toBottomOf="@id/tvUserName"
+            app:layout_constraintStart_toEndOf="@+id/tvUserName"
+            app:layout_constraintTop_toTopOf="@+id/tvUserName" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvComment"
+            style="@style/avenir_regular_text_style"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            tools:textColor="@color/textview_color"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/shimmerColor"
+            app:layout_constraintBottom_toBottomOf="@id/circleImageView"
+            app:layout_constraintStart_toEndOf="@+id/circleImageView"
+            app:layout_constraintTop_toBottomOf="@+id/tvUserName" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@color/grey_f3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

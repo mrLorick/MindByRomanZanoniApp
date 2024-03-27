@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/tableHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/journal_table_item_bg"
+        android:paddingHorizontal="@dimen/_13sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:weightSum="4"
+        app:layout_constraintTop_toBottomOf="@id/cvSearch">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="@string/_01_20_23"
+            android:layout_weight="1.2"
+            android:textColor="@color/heading_color_navi"
+            android:textSize="@dimen/_9ssp"
+            style="@style/avenir_bold_text_style"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSubject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/holidays"
+            android:layout_weight="1.3"
+            android:textColor="@color/heading_color_navi"
+            android:textSize="@dimen/_9ssp"
+            style="@style/avenir_bold_text_style"
+            app:layout_constraintStart_toEndOf="@id/tvDate"
+            app:layout_constraintEnd_toStartOf="@id/tvType"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/weight"
+            android:layout_weight="1.3"
+            android:textColor="@color/heading_color_navi"
+            android:textSize="@dimen/_9ssp"
+            style="@style/avenir_bold_text_style"
+            app:layout_constraintEnd_toStartOf="@id/tvEdit"
+            app:layout_constraintStart_toEndOf="@id/tvSubject"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tvEdit"
+            android:src="@drawable/edit_table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

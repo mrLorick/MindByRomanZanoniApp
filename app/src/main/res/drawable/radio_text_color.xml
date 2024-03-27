@@ -1,0 +1,5 @@
+<!-- radio_text_color.xml for different text colors -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:color="@color/theme_color_green" /> <!-- Checked text color -->
+    <item android:color="@color/heading_color_navi" /> <!-- Unchecked text color -->
+</selector>

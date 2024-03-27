@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- <uses-permission android:name="android.permission.USE_FINGERPRINT" /> -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:name="com.lorick.chatterbox.ApplicationClass"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MindByRomanZanoni"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
+
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.landscapeVideoPlay.LandscapeVideoPlayActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.searching.SearchCatOrSubCatActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.openPdfViewer.OpenPdfActivity"
+            android:exported="false" />
+
+        <service
+            android:name="com.lorick.chatterbox.videoOrAudioControls.MediaService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="mediaPlayback"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="androidx.media3.session.MediaLibraryService" />
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.lorick.chatterbox.notification.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.edificationVideoPlayer.EdificationVideoPlayerActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.editJournal.EditJournalActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.viewJouranl.ViewJournalActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.termsAndCondition.TermsAndConditionActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.chatList.UserChatListActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.messageList.MessageListActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.nowPlaying.NowPlayingActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.editProfile.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.profileDetails.ProfileDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.invite.InviteActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.contactUs.ContactUsActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.changePassword.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.setting.SettingScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.message.MessageActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.eventDetails.EventDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.notification.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.resourceListing.ResourceListingActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.edificationCategoryList.EdificationCategoryListActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.meditationCategoryList.MeditationCategoryListActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.meditationDetail.MeditationDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.verificationCode.VerificationCodeActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.dashboard.DashboardActivity"
+            android:exported="true"
+            android:screenOrientation="nosensor"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="https" />
+                <data android:host="mind.harishparas.com" />
+                <data android:scheme="http" />
+                <data android:host="mind.harishparas.com" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.createPassword.CreatePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.forgotPassword.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.login.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.signup.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.onboarding.OnBoardingActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lorick.chatterbox.view.activity.splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.lorick.chatterbox.socket.SignalRManager"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="com.lorick.chatterbox.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MindByRomanZanoni" />
+
+
+    </application>
+
+</manifest>

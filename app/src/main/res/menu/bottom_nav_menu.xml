@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/home_active"
+        android:title="Home"
+        />
+
+    <item
+        android:id="@+id/meditationsFragment"
+        android:icon="@drawable/meditation_light"
+        android:title="Meditations"
+        />
+    <item
+        android:id="@+id/edificationFragment"
+        android:icon="@drawable/edification_light"
+        android:title="Edification"
+        />
+
+    <item
+        android:id="@+id/journalFragment"
+        android:icon="@drawable/journal_light"
+        android:title="Journal"
+        />
+
+    <item
+        android:id="@+id/resourceFragment"
+        android:icon="@drawable/resource_light"
+        android:title="Resource"
+        />
+
+</menu>

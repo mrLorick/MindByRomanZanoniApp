@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.lorick.chatterbox.viewModel.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/_13ssp"
+            android:layout_marginTop="@dimen/_10ssp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/existing_entries"
+            android:textColor="@color/heading_color_navi"
+            android:textSize="@dimen/_13ssp"
+            style="@style/avenir_bold_black_text_style"
+            app:layout_constraintTop_toTopOf="@id/btnNewEntry"
+            app:layout_constraintBottom_toBottomOf="@id/btnNewEntry"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/btnNewEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_entry"
+                android:drawablePadding="@dimen/_3sdp"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:paddingVertical="@dimen/_3sdp"
+                android:drawableStart="@drawable/plus_circle"
+                android:background="@drawable/rectangular_btn_bg"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvSearch"
+                style="@style/MaterialCardEditTextStyle"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layout_constraintTop_toBottomOf="@id/btnNewEntry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/search_normal" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etsearch"
+                        style="@style/EditTextInputLayoutStyle"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:layout_toEndOf="@+id/ivImg"
+                        android:layout_toStartOf="@id/ivCross"
+                        android:hint="@string/enter_search_term_here" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivCross"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:padding="@dimen/_3sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/rating_close" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tableHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_header_bg"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:weightSum="4"
+                app:layout_constraintTop_toBottomOf="@id/cvSearch"
+                android:layout_marginTop="@dimen/_15sdp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    android:textColor="@color/heading_color_navi"
+                    android:textSize="@dimen/_9ssp"
+                    android:layout_weight="1"
+                    style="@style/avenir_bold_text_style"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvSubject"
+                    style="@style/avenir_bold_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subject"
+                    android:textColor="@color/heading_color_navi"
+                    android:textSize="@dimen/_9ssp"
+                    android:layout_weight="1.3"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvType"
+                    app:layout_constraintStart_toEndOf="@id/tvDate"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type"
+                    android:textColor="@color/heading_color_navi"
+                    android:textSize="@dimen/_9ssp"
+                    android:layout_weight="1.4"
+                    style="@style/avenir_bold_text_style"
+                    app:layout_constraintEnd_toStartOf="@id/tvEdit"
+                    app:layout_constraintStart_toEndOf="@id/tvSubject"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit"
+                    android:textColor="@color/heading_color_navi"
+                    android:textSize="@dimen/_9ssp"
+                    android:layout_weight="0.3"
+                    style="@style/avenir_bold_text_style"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTable"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tableHeader"
+                tools:layout_editor_absoluteX="17dp"
+                tools:listitem="@layout/item_journal_table" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/mainLayoutShimmer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tableHeader">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/shimmer_item_journal_table" />
+                        <include layout="@layout/shimmer_item_journal_table" />
+                        <include layout="@layout/shimmer_item_journal_table" />
+                        <include layout="@layout/shimmer_item_journal_table" />
+                        <include layout="@layout/shimmer_item_journal_table" />
+                        <include layout="@layout/shimmer_item_journal_table" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </ScrollView>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

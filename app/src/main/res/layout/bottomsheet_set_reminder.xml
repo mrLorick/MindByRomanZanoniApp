@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/layoutCoordinate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardLayoutBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_minus8sdp"
+            app:cardCornerRadius="@dimen/_15sdp"
+            app:cardElevation="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp">
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_5sdp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bottom_sheet_header_bg" />
+
+                </RelativeLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/avenir_bold_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/_25sdp"
+                    android:gravity="center"
+                    android:text="@string/set_reminder"
+                    android:textColor="@color/light_mode_black"
+                    android:textSize="@dimen/_14ssp" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="@dimen/_12sdp"
+                    android:background="@color/grey_line"
+                    app:layout_constraintTop_toBottomOf="@+id/llView" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_10sdp">
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radioFreeForm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_bg"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableStart="@drawable/clock"
+                        android:drawablePadding="@dimen/_15sdp"
+                        android:paddingHorizontal="@dimen/_12sdp"
+                        android:text="@string/an_hour_from_now"
+                        android:textColor="@drawable/radio_text_color"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radioToday"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_bg"
+                        android:button="@null"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:drawableStart="@drawable/clock"
+                        android:drawablePadding="@dimen/_15sdp"
+                        android:paddingHorizontal="@dimen/_12sdp"
+                        android:text="@string/today"
+                        android:textColor="@drawable/radio_text_color"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radioTomorrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_bg"
+                        android:button="@null"
+                        android:drawableStart="@drawable/clock"
+                        android:drawablePadding="@dimen/_15sdp"
+                        android:paddingHorizontal="@dimen/_12sdp"
+                        android:text="@string/tomorrow"
+                        android:textColor="@drawable/radio_text_color"
+                        android:textSize="@dimen/_12ssp" />
+
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radioPickDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_bg"
+                        android:button="@null"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:drawableStart="@drawable/calender_ic"
+                        android:drawablePadding="@dimen/_15sdp"
+                        android:paddingHorizontal="@dimen/_12sdp"
+                        android:text="@string/pick_date_and_time"
+                        android:textColor="@drawable/radio_text_color"
+                        android:textSize="@dimen/_12ssp" />
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

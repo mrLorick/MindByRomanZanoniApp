@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.lorick.chatterbox.viewModel.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/rectangular_corners">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etSearchMeditation"
+                style="@style/avenir_edit_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="18dp"
+                android:layout_toStartOf="@id/ivImg"
+                android:cursorVisible="false"
+                android:drawablePadding="@dimen/_14sdp"
+                android:focusable="false"
+                android:gravity="center_vertical"
+                android:hint="@string/search_meditation" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search"
+                android:padding="@dimen/_4sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/noDataFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/no_data_found"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchLayout"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvResource"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:nestedScrollingEnabled="false"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchLayout"
+            tools:listitem="@layout/rowitem_resources" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/mainLayoutShimmer"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchLayout"
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/shimmer_row_item_meditation" />
+                    <include layout="@layout/shimmer_row_item_meditation" />
+                    <include layout="@layout/shimmer_row_item_meditation" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </ScrollView>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

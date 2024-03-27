@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="light_mode_blue">#1D272F</color>
+    <color name="heading_color_black">#191D31</color>
+    <color name="light_mode_black">#191D31</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="app_color">#299988</color>
+    <color name="grey_e4">#E4E4E4</color>
+    <color name="grey_f3">#F3F3F3</color>
+    <color name="text_color_hint">#828282</color>
+    <color name="textview_color">#8C8D99</color>
+    <color name="bg_color_grey_dark">#DFDFDF</color>
+    <color name="light_mode_grey">#A7A9B7</color>
+    <color name="lightest_grey">#9799A5</color>
+    <color name="theme_color_green">#31B5A0</color>
+    <color name="grey">#6E6E6E</color>
+    <color name="grey_line">#EBECF3</color>
+    <color name="rectangular_outer_grey">#E1E1E1</color>
+    <color name="rectangular_inner_grey">#E5E5E5</color>
+    <color name="concrete_color">#F4F4F4</color>
+    <color name="otp_border">#A0A0A0</color>
+    <color name="apricot_white_alpha_100">#FFFFFFEB</color>
+    <color name="shalimar_alpha_100">#FFFFFFBF</color>
+    <color name="grey_D3D3D4">#EAEAEC</color>
+
+    <color name="heading_color_navi">#191D31</color>
+    <color name="sky_blue_F1F9F9">#F1F9F9</color>
+    <color name="grey_D8D8D8">#D8D8D8</color>
+    <color name="grey_EFEFEF">#EFEFEF</color>
+    <color name="yellow">#FFB800</color>
+    <color name="blue">#292D32</color>
+
+    <color name="red">#DD432B</color>
+
+    <color name="shimmerColor">#C2C2C2</color>
+    <color name="light_green">#EBF8F6</color>
+
+
+</resources>
